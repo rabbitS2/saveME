@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -21,14 +24,18 @@ import lombok.NoArgsConstructor;
 @Entity
 public class User {//유저정보
 
+	
 	@Id //PK
 	@Column(length = 50,name = "user_id")
+	@NotBlank()
+	@Email()
 	private String userId; //이메일로 가입
 	
 	@Column(nullable = false,length = 100, name = "user_pw") //해쉬암호화해야함.. 
 	private String userPw;
 	
 	@Column(nullable = false,length = 100, name = "user_name")
+	@NotBlank()
 	private String userName;
 	
 	@Column(nullable = false,length = 20, unique = true, name = "user_nick")
@@ -41,12 +48,12 @@ public class User {//유저정보
 	private String userAddr;
 	
 	//주소좌표
-	@Column(name = "user_x")
-	private int userX;
+	@Column(length = 30,name = "user_x")
+	private String userX;
 	
 	//주소좌표
-	@Column(name = "user_y")
-	private int userY;
+	@Column(length = 30,name = "user_y")
+	private String userY;
 	
 	@Column(length = 1000,name = "user_file")
 	private String userFile;
