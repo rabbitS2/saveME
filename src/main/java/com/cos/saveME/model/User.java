@@ -27,14 +27,15 @@ public class User {//유저정보
 	
 	@Id //PK
 	@Column(length = 50,name = "user_id")
-	@NotBlank(message = "아이디는 필수 입력 값입니다.")
-	@Email(message = "아이디는 이메일 주소로 입력하세요.")
+	@NotBlank()
+	@Email()
 	private String userId; //이메일로 가입
 	
 	@Column(nullable = false,length = 100, name = "user_pw") //해쉬암호화해야함.. 
 	private String userPw;
 	
 	@Column(nullable = false,length = 100, name = "user_name")
+	@NotBlank()
 	private String userName;
 	
 	@Column(nullable = false,length = 20, unique = true, name = "user_nick")
