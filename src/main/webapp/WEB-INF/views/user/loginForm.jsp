@@ -104,7 +104,7 @@
     	<h4 class="modal-title">Login to Your Account</h4>
         <div class="form-group">
             <input type="text" class="form-control" placeholder="ID" required="required" id="userId" name="username">
-        </div>d
+        </div>
         <div class="form-group">
             <input type="password" class="form-control" placeholder="Password" required="required" id="userPw" name="password">
         </div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +13,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=8feebc29d0a61418e734b53be1885531&libraries=services"></script>
 
 <style>
     body {
@@ -127,9 +129,14 @@
             <input type="text" class="form-control" placeholder="Phone" required="required" id="userTel">
         </div>
         <div class="form-group">
-        	<label for="name">Address</label> 
-            <input type="text" class="form-control" placeholder="Address" required="required" id="userAddr">
+        	<label for="name">Address</label> <br>
+        	<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호" id="addr1" type="text" readonly="readonly" >
+            <button type="button" class="btn btn-primary" id="execPostCode">우편번호 찾기</button>
+            <input type="text" class="form-control" placeholder="주소" required="required" id="addr2" readonly="readonly" >
+            <input type="text" class="form-control" placeholder="상세주소" required="required" id="addr3" >
         </div>
+        <input type="hidden" id="userX"><br>
+   		<input type="hidden" id="userY"><br>
     </form>			
         <input type="button" id="btn-save" class="btn btn-primary btn-block btn-lg" value="Sign up">              
 
