@@ -8,6 +8,7 @@ let index={
 	save:function(){
 		//alert('user의 save함수 호출');
 		let data={
+			userDiv:$("#userDiv").val(),
 			userId:$("#userId").val(),
 			userPw:$("#userPw").val(),
 			userNick:$("#userNick").val(),

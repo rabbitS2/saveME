@@ -102,8 +102,11 @@
 <body>
 <div class="login-form">    
     <form>
+    
 		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
     	<h4 class="modal-title">Login to Your Account</h4>
+    	
+    	<input type="hidden" value="CO" id="userDiv">
     	
         <div class="form-group">
         	<label for="name">ID</label> 
