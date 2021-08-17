@@ -23,7 +23,6 @@ public class UserService {
 		String rawPWD = user.getUserPw();
 		String encPWD = encoder.encode(rawPWD);  //해쉬처리
 		user.setUserPw(encPWD);
-		user.setUserDiv(RoleType.USER);
 		userRepository.save(user);
 	}
 	
