@@ -12,8 +12,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <style>
     body {
         color: #999;
@@ -107,27 +106,28 @@
     	
         <div class="form-group">
         	<label for="name">ID</label> 
-            <input type="text" class="form-control" placeholder="ID" required="required" id="userId">
+            <input type="text" class="form-control"  placeholder="이메일형식작성" id="userId"> 
         </div>
         <div class="form-group">
         	<label for="name">Password</label> 
-            <input type="password" class="form-control" placeholder="Password" required="required" id="userPw">
+            <input type="password" class="form-control"  placeholder="4자 이상 10자 이하" id="userPw">         
         </div>
+           
         <div class="form-group">
         	<label for="name">NickName</label> 
-            <input type="text" class="form-control" placeholder="NickName" required="required" id="userNick">
+            <input type="text" class="form-control"  placeholder=" 2자 이상 10자 이하"  id="userNick">
         </div>
         <div class="form-group">
         	<label for="name">Name</label> 
-            <input type="text" class="form-control" placeholder="Name" required="required" id="userName">
+            <input type="text"  class="form-control" id="userName"> 
         </div>
         <div class="form-group">
         	<label for="name">Phone</label> 
-            <input type="text" class="form-control" placeholder="Phone" required="required" id="userTel">
+            <input type="text" class="form-control"  placeholder="'-'제외" id="userTel">
         </div>
-        <div class="form-group">
-        	<label for="name">Address</label> 
-            <input type="text" class="form-control" placeholder="Address" required="required" id="userAddr">
+        <div class="form-group"> 
+        <label for="name">Address</label>
+        <input type="text" class="form-control" id="userAddr">
         </div>
     </form>			
         <input type="button" id="btn-save" class="btn btn-primary btn-block btn-lg" value="Sign up">              

@@ -3,6 +3,7 @@ let index={
 		$("#btn-save").on("click",()=>{
 			this.save();
 		});
+		
 	},
 	
 	save:function(){
@@ -15,7 +16,7 @@ let index={
 			userTel:$("#userTel").val(),
 			userAddr:$("#userAddr").val()
 		};
-		
+		console.log(data);
 		
 		$.ajax({
 			type:"POST",
@@ -36,6 +37,7 @@ let index={
 		});
 		
 	},
+	
 	
 	
 	
