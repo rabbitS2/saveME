@@ -112,22 +112,27 @@
         <div class="form-group">
         	<label for="name">ID</label> 
             <input type="text" class="form-control" placeholder="ID" required="required" id="userId">
+        	<label id="valid_userId" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Password</label> 
             <input type="password" class="form-control" placeholder="Password" required="required" id="userPw">
+        	<label id="valid_userPw" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">NickName</label> 
             <input type="text" class="form-control" placeholder="NickName" required="required" id="userNick">
+        	<label id="valid_userNick" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Name</label> 
             <input type="text" class="form-control" placeholder="Name" required="required" id="userName">
+        	<label id="valid_userName" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Phone</label> 
             <input type="text" class="form-control" placeholder="Phone" required="required" id="userTel">
+        	<label id="valid_userTel" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Address</label> <br>
@@ -139,7 +144,9 @@
         <input type="hidden" id="userX"><br>
    		<input type="hidden" id="userY"><br>
     </form>			
-        <input type="button" id="btn-save" class="btn btn-primary btn-block btn-lg" value="Sign up">              
+        <input type="button" id="btn-save" class="btn btn-primary btn-block btn-lg" value="Sign up">  
+        
+        <div id="result"></div>      
 
 <script src="/saveME/js/user.js"></script>
 </div>
