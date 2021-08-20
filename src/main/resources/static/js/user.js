@@ -11,6 +11,7 @@ let index={
 	
 	save:function(){
 		//alert('user의 save함수 호출');
+		var userAddr = $("#addr1").val()+ "/" + $("#addr2").val() + "/" + $("#addr3").val();
 		
 		let data={
 			userDiv:$("#userDiv").val(),

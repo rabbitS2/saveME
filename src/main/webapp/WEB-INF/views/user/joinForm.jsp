@@ -111,27 +111,27 @@
     	<input type="hidden" value="USER" id="userDiv">
         <div class="form-group">
         	<label for="name">ID</label> 
-            <input type="text" class="form-control" placeholder="ID" required="required" id="userId">
+            <input type="text" class="form-control" placeholder="이메일형식으로 입력해주세요." id="userId">
         	<label id="valid_userId" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Password</label> 
-            <input type="password" class="form-control" placeholder="Password" required="required" id="userPw">
+            <input type="password" class="form-control" placeholder="4자 이상 10자 이하로 입력해주세요."  id="userPw">
         	<label id="valid_userPw" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">NickName</label> 
-            <input type="text" class="form-control" placeholder="NickName" required="required" id="userNick">
+            <input type="text" class="form-control" placeholder="2자 이상 10자 이하로 입력해주세요."  id="userNick">
         	<label id="valid_userNick" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Name</label> 
-            <input type="text" class="form-control" placeholder="Name" required="required" id="userName">
+            <input type="text" class="form-control" id="userName">
         	<label id="valid_userName" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Phone</label> 
-            <input type="text" class="form-control" placeholder="Phone" required="required" id="userTel">
+            <input type="text" class="form-control" placeholder="'-'제외 입력해주세요."  id="userTel">
         	<label id="valid_userTel" class="valid"></label>
         </div>
         <div class="form-group">
