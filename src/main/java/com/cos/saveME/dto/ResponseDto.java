@@ -1,6 +1,5 @@
 package com.cos.saveME.dto;
 
-import org.springframework.http.HttpStatus;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
