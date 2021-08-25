@@ -101,41 +101,53 @@
 </head>
 <body>
 <div class="login-form">    
-    <form>
-    
+
+     <form id="JoinForm_co" enctype="multipart/form-data" method="post">
 		<div class="avatar"><i class="material-icons">&#xE7FF;</i></div>
     	<h4 class="modal-title">Login to Your Account</h4>
     	
-    	<input type="hidden" value="CO" id="userDiv">
-    	
+    	<input type="hidden" value="USER" id="userDiv">
         <div class="form-group">
         	<label for="name">ID</label> 
             <input type="text" class="form-control" placeholder="ID" required="required" id="userId">
+        	<label id="valid_userId" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Password</label> 
             <input type="password" class="form-control" placeholder="Password" required="required" id="userPw">
+        	<label id="valid_userPw" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">NickName</label> 
             <input type="text" class="form-control" placeholder="NickName" required="required" id="userNick">
+        	<label id="valid_userNick" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Name</label> 
             <input type="text" class="form-control" placeholder="Name" required="required" id="userName">
+        	<label id="valid_userName" class="valid"></label>
         </div>
         <div class="form-group">
         	<label for="name">Phone</label> 
             <input type="text" class="form-control" placeholder="Phone" required="required" id="userTel">
+        	<label id="valid_userTel" class="valid"></label>
         </div>
         <div class="form-group">
-        	<label for="name">Address</label> 
-            <input type="text" class="form-control" placeholder="Address" required="required" id="userAddr">
+        	<label for="name">Address</label> <br>
+        	<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호" id="addr1" type="text" readonly="readonly" >
+            <button type="button" class="btn btn-primary" id="execPostCode">우편번호 찾기</button>
+            <input type="text" class="form-control" placeholder="주소" required="required" id="addr2" readonly="readonly" >
+            <input type="text" class="form-control" placeholder="상세주소" required="required" id="addr3" >
         </div>
+         <input type="file" name="file" multiple="true">
+        <input type="hidden" id="userX"><br>
+   		<input type="hidden" id="userY"><br>
     </form>			
-        <input type="button" id="btn-save" class="btn btn-primary btn-block btn-lg" value="Sign up">              
+        <input type="button" id="btn-save-co" class="btn btn-primary btn-block btn-lg" value="Sign up" name="userFile">  
+        
+        <div id="result"></div>      
 
 <script src="/saveME/js/user.js"></script>
 </div>
 </body>
-</html>                                		
+</html>                                		     		

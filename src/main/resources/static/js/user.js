@@ -4,6 +4,9 @@ let index={
 		$("#btn-save").on("click",()=>{
 			this.save();
 		});
+		$("#btn-save-co").on("click",()=>{
+			this.save_co();
+		});
 		$("#execPostCode").on("click",()=>{
 			this.execPostCode();
 		});
@@ -11,6 +14,7 @@ let index={
 	
 	save:function(){
 		//alert('user의 save함수 호출');
+		var userAddr = $("#addr1").val()+ "/" + $("#addr2").val() + "/" + $("#addr3").val();
 		
 		let data={
 			userDiv:$("#userDiv").val(),
@@ -36,7 +40,7 @@ let index={
 			if(resp.status === 200){  // 정상적으로 통신하면 200이 리턴되기 때문
 				alert("회원가입이 완료되었습니다.");
 				//console.log(resp);
-				location.href="/saveME";
+				location.href="/saveME/auth/loginForm";
 			}else{
 				console.log(resp);
 				$.each(resp.data, function (i, item) { //each(매개변수, 함수) 
@@ -49,6 +53,37 @@ let index={
 		});
 		
 	},
+	save_co:function(){
+		//alert('user의 save함수 호출');
+		var form = new FormData(document.getElementById('JoinForm_co'));
+		
+		$.ajax({
+			type: "POST",
+			url: "/saveME/auth/joinProc_co",
+			data: form,
+			contentType: false, //body데이터가 어떤 타입인지(MIME)
+			processData: false,
+			dataType: "json" //요청을 서버로해서 응답이 왔을 때 기본적으로 모든 것이 문자열(생긴게 json이라면)-->javascript 오브젝트로 변경
+		}).done(function(resp){
+			$('.valid').html('');
+			if(resp.status === 200){  // 정상적으로 통신하면 200이 리턴되기 때문
+				alert("회원가입이 완료되었습니다.");
+				//console.log(resp);
+				location.href="/saveME/auth/loginForm";
+			}else{
+				console.log(resp);
+				$.each(resp.data, function (i, item) { //each(매개변수, 함수) 
+				$('#'+i).html(item);
+				});
+
+			}
+		}).fail(function(error){
+			alert(JSON.stringify(error));
+		});
+		
+	},
+	
+	
 	
 	
 	execPostCode:function(){
