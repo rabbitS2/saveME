@@ -6,6 +6,7 @@ server:
       charset: UTF-8
       enabled: true
       force: true
+      
     
 spring:
   mvc:
@@ -33,3 +34,10 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+      
+  servlet:
+    multipart:
+      file-size-threshold: 1MB
+      location: D:/workspace_STS2/saveME/src/main/resources/static/fileTemp
+      max-file-size: 100MB
+      max-request-size: 100MB
